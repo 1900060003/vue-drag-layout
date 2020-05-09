@@ -12,10 +12,10 @@
       <template v-if="attributesLayout">
         <div v-for="(attributes,index) of attributesLayout.config" :key="'attributes-cmp-' + index">
           <label>{{attributes.name}}</label>
-          <select v-if="attributes.type === 'select'" @change="attributes.fn($event)">
-            <option v-for="(option, optionIndex) of attributes.option" :key="'attributes-cmp-' + index + '-item-' + optionIndex" :value="option.value" :label="option.text"></option>
+          <select v-if="attributes.type === 'select'" @change="attributes.fn($event)" :value="attributes.value">
+            <option v-for="(option, optionIndex) of attributes.option" :key="'attributes-cmp-' + index + '-item-' + optionIndex" :value="option.value" :label="option.text" :selected="option.selected"></option>
           </select>
-          <input v-if="attributes.type === 'input'" @change="attributes.fn($event)" />
+          <input v-if="attributes.type === 'input'" :value="attributes.value" @change="attributes.fn($event)" />
         </div>
         <button @click="attributesLayout.remove">Remove</button>
       </template>
@@ -198,7 +198,6 @@ export default {
         width: 100%;
         top: 0;
         background-color: rgba(0, 0, 0, .2);
-        user-select: none;
 
         &.hidden {
           display: none;

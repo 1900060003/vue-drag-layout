@@ -22,7 +22,7 @@
 export default {
   name: 'air-checkbox',
   customizationSize: {
-    width: 3,
+    width: 2,
     height: 1,
     maxWidth: Infinity,
     maxHeight: 1
@@ -93,6 +93,7 @@ export default {
       return [{
         name: 'label',
         type: 'input',
+        value: this.input_val,
         fn: this.setLabel
       }, {
         name: 'label position',
@@ -104,6 +105,7 @@ export default {
           text: '右',
           value: 'PR'
         }],
+        value: this.input_labelPosition,
         fn: this.setLabelPosition
       }, {
         name: 'label align',
@@ -118,6 +120,7 @@ export default {
           text: '居中',
           value: 'AC'
         }],
+        value: this.input_labelAlign,
         fn: this.setLabelAlign
       }]
     }

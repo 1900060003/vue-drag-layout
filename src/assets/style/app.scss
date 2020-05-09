@@ -6,3 +6,9 @@ body,
   height: 100vh;
   overflow: hidden;
 }
+
+* {
+  &:not(input) {
+    user-select: none;
+  }
+}

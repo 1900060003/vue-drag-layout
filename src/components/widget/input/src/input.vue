@@ -30,7 +30,7 @@
 export default {
   name: 'air-input',
   customizationSize: {
-    width: 4,
+    width: 3,
     height: 1,
     maxWidth: Infinity,
     maxHeight: 1
@@ -118,10 +118,12 @@ export default {
           text: '密码',
           value: 'password'
         }],
+        value: this.input_type,
         fn: this.setType
       }, {
         name: 'label',
         type: 'input',
+        value: this.input_label,
         fn: this.setLabel
       }, {
         name: 'label position',
@@ -139,6 +141,7 @@ export default {
           text: '下',
           value: 'PB'
         }],
+        value: this.input_labelPosition,
         fn: this.setLabelPosition
       }, {
         name: 'label align',
@@ -153,6 +156,7 @@ export default {
           text: '居中',
           value: 'AC'
         }],
+        value: this.input_labelAlign,
         fn: this.setLabelAlign
       }]
     }
