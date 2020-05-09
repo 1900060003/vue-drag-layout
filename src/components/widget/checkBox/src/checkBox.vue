@@ -93,7 +93,7 @@ export default {
       return [{
         name: 'label',
         type: 'input',
-        value: this.input_val,
+        value: this.input_label,
         fn: this.setLabel
       }, {
         name: 'label position',
